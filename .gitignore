@@ -26,4 +26,4 @@ dist-ssr
 .eslintcache
 .vscode
 assets
-src-tauri/target
+src-tauri
