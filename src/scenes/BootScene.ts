@@ -7,7 +7,7 @@ export default class BootScene extends BaseScene {
   }
 
   preload() {
-    this.loadImage(ImageNames.start_bg, 'jpg');
+    this.loadImage(ImageNames.start_bg);
   }
 
   create() {

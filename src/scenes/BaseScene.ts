@@ -13,7 +13,7 @@ export default class BaseScene extends Phaser.Scene {
     this.load.audio(name, `assets/sounds/${name}.${format}`);
   }
 
-  private getSpritePath(imageName: keyof typeof ImageNames, format: ImageFormat): string {
+  getSpritePath(imageName: ImageNames, format: ImageFormat = 'png'): string {
     return `assets/sprites/${imageName}.${format}`;
   }
 
