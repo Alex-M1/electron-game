@@ -6,8 +6,8 @@ import MainMenu from './scenes/MainMenuScene';
 import PreloadScene from './scenes/PreloadScene';
 
 window.addEventListener('DOMContentLoaded', () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const game = new Phaser.Game({
+  // eslint-disable-next-line no-new
+  new Phaser.Game({
     ...APP_SIZE,
     type: Phaser.AUTO,
     scene: [BootScene, PreloadScene, MainMenu],

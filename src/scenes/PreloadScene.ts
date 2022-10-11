@@ -1,10 +1,9 @@
 import LoadingBar from '../classes/LoadingBar';
 import { ImageNames, SceneNames } from '../constants/names';
 import BaseScene from './BaseScene';
-import tilemap from '../../assets/map.json';
 import { SoundsType } from '../types/commonTypes';
 import SoundManager from '../classes/SoundManager';
-import { tileFrameSize } from '../constants/configs';
+import ImageManager from '../classes/ImageManager';
 
 export default class PreloadScene extends BaseScene {
   sounds: SoundsType | null;
@@ -18,11 +17,11 @@ export default class PreloadScene extends BaseScene {
     this.add.sprite(0, 0, ImageNames.start_bg)
       .setOrigin(0);
 
-    this.load.spritesheet(ImageNames.tileset, this.getSpritePath(ImageNames.tileset), tileFrameSize);
-    this.load.tilemapTiledJSON('tilemap', tilemap);
+    ImageManager.loadImages(this);
+    ImageManager.loadSpriteSheet(this);
+    ImageManager.loadTilemapTiledJSON(this);
 
     SoundManager.loadAllSound(this);
-    // this.loadAtlas(AtlasNames.objects);
   }
   create() {
     SoundManager.creatSounds(this);

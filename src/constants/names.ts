@@ -6,7 +6,10 @@ export enum SceneNames {
 
 export enum ImageNames {
   start_bg = 'start_bg',
-  tileset = 'tileset'
+  tileset = 'tileset',
+  menu_bg = 'menu_bg',
+  menu_button = 'menu_button',
+  cross_menu = 'cross_menu'
 }
 
 export enum SoundNames {

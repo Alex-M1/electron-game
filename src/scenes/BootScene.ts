@@ -1,5 +1,6 @@
-import { ImageNames, SceneNames } from '../constants/names';
+import { SceneNames } from '../constants/names';
 import BaseScene from './BaseScene';
+import ImageManager from '../classes/ImageManager';
 
 export default class BootScene extends BaseScene {
   constructor() {
@@ -7,7 +8,7 @@ export default class BootScene extends BaseScene {
   }
 
   preload() {
-    this.loadImage(ImageNames.start_bg);
+    ImageManager.loadMainBg(this);
   }
 
   create() {

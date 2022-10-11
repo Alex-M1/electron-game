@@ -4,3 +4,4 @@ export const APP_SIZE = {
 };
 
 export const tileFrameSize = { frameWidth: 16, frameHeight: 16 };
+export const soundVolume = 0;
